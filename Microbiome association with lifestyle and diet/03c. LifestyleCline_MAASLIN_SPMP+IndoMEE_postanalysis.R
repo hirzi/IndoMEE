@@ -1,7 +1,3 @@
-rm(list=ls())
-
-setwd("C:/Users/caf77/OneDrive - University of Cambridge/Documents/Analysis/MOBILE/0_Pilot/")
-
 library(ggplot2)
 library(ggpubr)
 library(ggtext)
@@ -581,3 +577,4 @@ ggsave(p,
        filename = "output_files/revised_MAG/MAASLIN2/maaslin2_SPMP_CLR_LsGrd/cont_p20/figures/RA_heatmap_p20_selected_top100.svg",
        width = 55,height = 30, units = "cm",dpi = "print")
 saveRDS(p, file="figout/Figure2/FigS2C_RA_heatmap_p20_top100.rds")
+
