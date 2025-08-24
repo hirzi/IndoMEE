@@ -1,6 +1,3 @@
-rm(list=ls())
-setwd("C:/Users/caf77/OneDrive - University of Cambridge/Documents/Analysis/MOBILE/0_Pilot_reviewed")
-
 library(ape)
 library(phangorn)
 library(picante)
@@ -201,3 +198,4 @@ for(i in seq(ndir)){
 # WRITE OUTPUT
 write.table(collate.adiv, file = "input_files/alpha_diversity_subsampled_wFD.tsv", quote = F, row.names = F,sep = "\t")
 saveRDS(mypaths, file="input_files/alpha_diversity_subsampled_paths.rds")
+
