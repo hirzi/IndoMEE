@@ -10,7 +10,7 @@ source("99.community_data_utils.R") # load custom scripts
 ###########
 ## Paths ##
 ###########
-figout_dir="C:/Users/caf77/OneDrive - University of Cambridge/Documents/Analysis/MOBILE/0_Pilot_reviewed/figout/adiv"
+figout_dir="figout/adiv"
 dir.create(figout_dir,recursive=T,showWarnings=F)
 
 #################################
@@ -515,4 +515,5 @@ ks.test(compare_df$shannon[compare_df$population=="Balinese_PDW"],
 #  3pop SIN - Kurskal -?
 sin_df <- subset(compare_df, compare_df$population %in% c("Chinese_SIN","Malay_SIN","Indian_SIN"))
 pairwise.wilcox.test(sin_df$shannon, g=sin_df$population, p.adjust.method = "fdr")
+
 
