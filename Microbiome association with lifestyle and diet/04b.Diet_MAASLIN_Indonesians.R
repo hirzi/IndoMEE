@@ -84,7 +84,7 @@ write.table(full.taxonomy,"output_files/revised_MAG/MAASLIN2/maaslin2_diet+pop_C
 ## Reload Input ##
 ##################
 # run new data
-base_dir <- "C:/Users/caf77/OneDrive - University of Cambridge/Documents/Analysis/MOBILE/0_Pilot_reviewed/output_files/revised_MAG/MAASLIN2/maaslin2_diet+pop_CLR/"
+base_dir <- "output_files/revised_MAG/MAASLIN2/maaslin2_diet+pop_CLR/"
 input.comm <- read.delim(paste0(base_dir,"maaslin_input_comm.tsv", collapse = ""))
 input.metadata <- read.delim(paste0(base_dir,"maaslin_input_metadata.tsv", collapse = ""))
 
@@ -372,7 +372,7 @@ write.table(signif_count,"output_files/revised_MAG/MAASLIN2/maaslin2_diet+pop_CL
 #################
 # Multivariate ##
 #################
-base_dir <- "C:/Users/caf77/OneDrive - University of Cambridge/Documents/Analysis/MOBILE/0_Pilot_reviewed/output_files/revised_MAG/MAASLIN2/maaslin2_diet+pop_CLR/"
+base_dir <- "output_files/revised_MAG/MAASLIN2/maaslin2_diet+pop_CLR/"
 
 # set var
 multivar <- c("Sago","Pork","Chicken") # we dropped Egg and Hunting because only 1 MAG was significant in the models with adjustments
@@ -510,7 +510,7 @@ for(sub in c("indomee","nonBali")){
 
 
 # count mags
-base_dir <- "C:/Users/caf77/OneDrive - University of Cambridge/Documents/Analysis/MOBILE/0_Pilot_reviewed/output_files/revised_MAG/MAASLIN2/maaslin2_diet+pop_CLR/"
+base_dir <- "output_files/revised_MAG/MAASLIN2/maaslin2_diet+pop_CLR/"
 tests_list <- list.files(base_dir)
 n <- c(grep("Multi",tests_list),
        grep("population",tests_list))
@@ -603,4 +603,5 @@ c <- ggvenn(venn_adjs, fill_color = c("tomato2","#7A67EE"), text_size = 7) + ggt
 d <- ggvenn(venn_conf, fill_color = c("tomato2","#7A67EE"), text_size = 7) + ggtitle("Adjusted - NonBali")
 
 ggarrange(plotlist = list(a,b,c,d))
+
 
