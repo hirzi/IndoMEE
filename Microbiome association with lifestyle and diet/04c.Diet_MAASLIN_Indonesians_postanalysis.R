@@ -1,6 +1,3 @@
-rm(list=ls())
-setwd("C:/Users/caf77/OneDrive - University of Cambridge/Documents/Analysis/MOBILE/0_Pilot_reviewed/")
-
 library(ggplot2)
 library(ggpubr)
 library(ggvenn)
@@ -1192,3 +1189,4 @@ psych::describe(popranef.df[popranef.df$feature%in%diet.MAGs, "pop_var"])
 psych::describe(popranef.df[!popranef.df$feature%in%diet.MAGs, "pop_var"])
 
 wilcox.test(diet.popvarex[diet.popvarex$variance=="pop_var","value"] ~ diet.popvarex[diet.popvarex$variance=="pop_var","significant"])
+
