@@ -55,7 +55,7 @@ saveRDS(p, file="figout/FigureS3/FigS3F_2.rds")
 ### population vs diet
 #### All Samples (n=73)
 n <- length(unique(input.metadata$sampleid))
-base_dir <- "C:/Users/caf77/OneDrive - University of Cambridge/Documents/Analysis/MOBILE/0_Pilot_reviewed/output_files/revised_MAG/MAASLIN2/maaslin2_diet+pop_CLR/"
+base_dir <- "output_files/revised_MAG/MAASLIN2/maaslin2_diet+pop_CLR/"
 tests_list <- list.files(base_dir)
 se <- c(grep("Multi",tests_list),
        grep("population",tests_list))
@@ -106,7 +106,7 @@ saveRDS(p2, file="figout/FigureS3/FigS3F_4.rds")
 ## Barplot ##
 #############
 library(purrr)
-base_dir <- "C:/Users/caf77/OneDrive - University of Cambridge/Documents/Analysis/MOBILE/0_Pilot_reviewed/output_files/revised_MAG/MAASLIN2/maaslin2_diet+pop_CLR/"
+base_dir <- "output_files/revised_MAG/MAASLIN2/maaslin2_diet+pop_CLR/"
 
 count_data <- read.delim("output_files/revised_MAG/MAASLIN2/maaslin2_diet+pop_CLR/0_SUMMARY/count_signif_multivar_wnonBali.tsv")
 count_data <- count_data[!count_data$model %in% c("old_base","old_population","Multivar_diet+age+sex"),]
@@ -1189,4 +1189,5 @@ psych::describe(popranef.df[popranef.df$feature%in%diet.MAGs, "pop_var"])
 psych::describe(popranef.df[!popranef.df$feature%in%diet.MAGs, "pop_var"])
 
 wilcox.test(diet.popvarex[diet.popvarex$variance=="pop_var","value"] ~ diet.popvarex[diet.popvarex$variance=="pop_var","significant"])
+
 
