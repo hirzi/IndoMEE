@@ -1,7 +1,3 @@
-rm(list=ls())
-
-setwd("C:/Users/caf77/OneDrive - University of Cambridge/Documents/Analysis/MOBILE/0_Pilot/")
-
 # custom functions
 convert_to_CPM <- function(comm.df){
   comm.df <- comm.df*10^6
@@ -146,5 +142,6 @@ fit <- Maaslin2(input_data = indomee_input,
                 min_prevalence = 0,
                 plot_scatter = F,
                 save_models=T)
+
 
 
