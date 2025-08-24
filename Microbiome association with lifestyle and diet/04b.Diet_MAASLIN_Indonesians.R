@@ -1,6 +1,3 @@
-rm(list=ls())
-setwd("C:/Users/caf77/OneDrive - University of Cambridge/Documents/Analysis/MOBILE/0_Pilot_reviewed/")
-
 # custom functions #
 ####################
 convert_to_CPM <- function(comm.df){
@@ -606,3 +603,4 @@ c <- ggvenn(venn_adjs, fill_color = c("tomato2","#7A67EE"), text_size = 7) + ggt
 d <- ggvenn(venn_conf, fill_color = c("tomato2","#7A67EE"), text_size = 7) + ggtitle("Adjusted - NonBali")
 
 ggarrange(plotlist = list(a,b,c,d))
+
