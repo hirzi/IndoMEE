@@ -1,7 +1,3 @@
-rm(list=ls())
-
-setwd("C:/Users/caf77/OneDrive - University of Cambridge/Documents/Analysis/MOBILE/0_Pilot_reviewed/")
-
 library(vegan)
 library(AICcPermanova)
 library(ggplot2)
@@ -221,6 +217,7 @@ tmp$form <- "Distance ~ lifestyle + storage_method"
 
 out <- rbind(out, tmp)
 write.table(out, file.path(outdir,"/PERMANOVA_compare_dataset_lifestyle+storage.tsv"), quote = F, row.names = F, sep = "\t")
+
 
 
 
