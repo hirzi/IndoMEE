@@ -1,6 +1,3 @@
-rm(list=ls())
-setwd("C:/Users/caf77/OneDrive - University of Cambridge/Documents/Analysis/MOBILE/0_Pilot")
-
 # setup
 library(ggplot2)
 library(gridExtra)
@@ -636,4 +633,5 @@ saveRDS(col, file.path(outdir,"FigS3D.rds"))
 ggsave(plot=col, filename = file.path(outdir,"FigS3D.png"),height = 5,width = 19,device = "png", units = "in",scale = 0.9)
 ggsave(plot=col, filename = file.path(outdir,"FigS3D.svg"),height = 5,width = 19,device = "svg", units = "in",scale = 0.9)
 ggsave(plot=col, filename = file.path(outdir,"FigS3D.pdf"),height = 5,width = 19,device = "pdf", units = "in",scale = 0.9)
+
 
