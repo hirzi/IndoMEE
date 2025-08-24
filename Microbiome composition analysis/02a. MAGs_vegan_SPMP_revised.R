@@ -1,7 +1,3 @@
-rm(list=ls())
-
-setwd("C:/Users/caf77/OneDrive - University of Cambridge/Documents/Analysis/MOBILE/0_Pilot_reviewed/")
-
 # load libraries
 library(ggplot2)
 library(ggpubr)
@@ -592,3 +588,4 @@ pf <- grep("clust",colnames(tmp))
 colnames(tmp)[pf] <- paste0("IndoMEE_",colnames(tmp)[pf])
 cluster.df <- merge.data.frame(cluster.df.SPMP, tmp[,c(1,pf)], by="sampleid")
 write.table(cluster.df, "figout/additional_figs/ward_clusters.tsv", row.names = F, quote = F, sep = "\t")
+
